@@ -32,8 +32,9 @@ DATA_INGESTION_FEATURE_STORE_DIR: str = "feature_store"
 DATA_INGESTION_INGESTED_DIR: str = "ingested"
 DATA_INGESTION_TRAIN_TEST_SPLIT_RATIO: float = 0.2
 
+
 """
-Data Validation related constant start with DATA_VALIDATION VAR NAME
+Data Validation related constant start with DATA_VALIDATION VAR NAME #lec 287
 """
 DATA_VALIDATION_DIR_NAME: str = "data_validation"
 DATA_VALIDATION_VALID_DIR: str = "validated"
