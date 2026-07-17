@@ -27,6 +27,7 @@ def write_yaml_file(file_path: str, content: object, replace: bool = False) -> N
     except Exception as e:
         raise NetworkSecurityException(e, sys)
     
+    #lec 289 Data transformation Architecture
 def save_numpy_array_data(file_path: str, array: np.array):
     """
     Save numpy array data to file
@@ -40,6 +41,8 @@ def save_numpy_array_data(file_path: str, array: np.array):
             np.save(file_obj, array)
     except Exception as e:
         raise NetworkSecurityException(e, sys) from e
+    
+     #lec 289 Data transformation Architecture
     
 def save_object(file_path: str, obj: object) -> None:
     try:
