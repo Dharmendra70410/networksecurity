@@ -42,6 +42,7 @@ def save_numpy_array_data(file_path: str, array: np.array):
     except Exception as e:
         raise NetworkSecurityException(e, sys) from e
     
+
      #lec 289 Data transformation Architecture
     
 def save_object(file_path: str, obj: object) -> None:
@@ -78,7 +79,7 @@ def load_numpy_array_data(file_path: str) -> np.array:
     
 
 
-def evaluate_models(X_train, y_train,X_test,y_test,models,param):
+def evaluate_models(X_train, y_train,X_test,y_test,models,param): #lec 292
     try:
         report = {}
 
@@ -87,16 +88,17 @@ def evaluate_models(X_train, y_train,X_test,y_test,models,param):
             para=param[list(models.keys())[i]]
 
             gs = GridSearchCV(model,para,cv=3)
-            gs.fit(X_train,y_train)
+            gs.fit(X_train,y_train)#Train Random Forest, Xgboost etc with different parameter values.
 
             model.set_params(**gs.best_params_)
-            model.fit(X_train,y_train)
+            model.fit(X_train,y_train) #Now train the model using the best parameters
+
 
             #model.fit(X_train, y_train)  # Train model
 
             y_train_pred = model.predict(X_train)
-
             y_test_pred = model.predict(X_test)
+
 
             train_model_score = r2_score(y_train, y_train_pred)
 

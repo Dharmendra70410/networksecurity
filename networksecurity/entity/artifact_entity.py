@@ -21,4 +21,16 @@ class DataTransformationArtifact:
     transformed_test_file_path:str
     
 
-    
+@dataclass  #lec 291, forth component
+class ClassificationMetricArtifact:
+    f1_score:float
+    precision_score:float
+    recall_score:float
+
+
+@dataclass #lec 291, forth component
+class ModelTrainerArtifact:
+    trained_model_file_path:str
+    train_metric_artifact:ClassificationMetricArtifact
+    test_metric_artifact:ClassificationMetricArtifact
+

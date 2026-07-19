@@ -93,7 +93,7 @@ class DataTransformation:
             preprocessor_object=preprocessor.fit(input_feature_train_df) #fit is only for input
             transformed_input_train_feature=preprocessor_object.transform(input_feature_train_df)
             transformed_input_test_feature=preprocessor_object.transform(input_feature_test_df) #transformed only for test (data likage)
-
+        
             train_arr = np.c_[transformed_input_train_feature, np.array(target_feature_train_df) ] #Column-wise concatenate (join columns).
             test_arr = np.c_[ transformed_input_test_feature, np.array(target_feature_test_df) ]
 

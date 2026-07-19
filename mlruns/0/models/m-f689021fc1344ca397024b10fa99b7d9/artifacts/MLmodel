@@ -1,0 +1,23 @@
+artifact_path: file:///C:/Users/dharm/OneDrive/Desktop/skill/prac_project/NETWORKSECURITY/mlruns/0/models/m-f689021fc1344ca397024b10fa99b7d9/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.skops
+    predict_fn: predict
+    python_version: 3.10.0
+  sklearn:
+    code: null
+    pickled_model: model.skops
+    serialization_format: skops
+    sklearn_version: 1.7.2
+    skops_trusted_types: null
+mlflow_version: 3.14.0
+model_id: m-f689021fc1344ca397024b10fa99b7d9
+model_size_bytes: 31135069
+model_uuid: m-f689021fc1344ca397024b10fa99b7d9
+prompts: null
+run_id: cf89ecb2c9944e4eab03b878b7fa9fea
+utc_time_created: '2026-07-19 06:59:47.160100'
