@@ -10,4 +10,8 @@ dill
 #pickle now it comes with python lib, no need to install it ,read gpt
 pyaml
 #
-mlflow
+mlflow #l
+dagshub #lec 293
+fastapi #lec 295
+uvicorn #lec 295
+python-multipart #need when we upload the test data as file

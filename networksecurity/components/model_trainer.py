@@ -23,6 +23,13 @@ from sklearn.ensemble import (
     RandomForestClassifier,
 )
 import mlflow
+
+
+
+import dagshub
+dagshub.init(repo_owner='Dharmendra70410', repo_name='networksecurity', mlflow=True)
+
+
 from urllib.parse import urlparse
 
 
@@ -49,6 +56,7 @@ class ModelTrainer:
             mlflow.log_metric("recall_score", recall_core)
             mlflow.sklearn.log_model(best_model, "model")
         
+
 
     def train_model(self,X_train, y_train, x_test, y_test):
         #start evaluation with different machine algorithm
@@ -120,9 +128,21 @@ class ModelTrainer:
 
          Network_Model=NetworkModel(preprocessor=preprocessor,model=best_model) # # Combines the trained preprocessor (KNN pipeline) and the best trained model into a single object for future predictions on new data.
          save_object(self.model_trainer_config.trained_model_file_path,obj=Network_Model)
+        #         #location of file 
+#       Artifacts/
+# └──     <timestamp>/
+#     └──     model_trainer/
+#         └──      trained_model/
+#                     └── model.pkl
+
+# NetworkModel
+# │
+# ├── preprocessor (KNN Pipeline)
+# └── best_model (Random Forest, etc.)
+
         #model pusher
-         save_object("final_model/model.pkl",best_model) # it does not contain preprocessing, if new data comes, need to preprocess
-        
+         save_object("final_model/model.pkl",best_model) # saved only trainded model,  it does not contain preprocessing, if new data comes, need to preprocess
+
 
         ## Model Trainer Artifact
          model_trainer_artifact=ModelTrainerArtifact(trained_model_file_path=self.model_trainer_config.trained_model_file_path,

@@ -22,10 +22,10 @@ from networksecurity.utils.main_utils.utils import  save_numpy_array_data,save_o
 #lec 290
 
 class DataTransformation:
-    def __init__(self, data_valadation_artifact:DataValidationArtifact, data_transformation_config
+    def __init__(self, data_validation_artifact:DataValidationArtifact, data_transformation_config
                  :DataTransformationConfig):
         try:
-            self.data_validation_artifact:DataValidationArtifact=data_valadation_artifact
+            self.data_validation_artifact:DataValidationArtifact=data_validation_artifact
             self.data_transformation_config:DataTransformationConfig=data_transformation_config
         except Exception as e:
             raise NetworkSecurityException(e,sys)
