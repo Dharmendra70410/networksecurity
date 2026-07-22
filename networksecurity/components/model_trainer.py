@@ -141,7 +141,7 @@ class ModelTrainer:
 # └── best_model (Random Forest, etc.)
 
         #model pusher
-         save_object("final_model/model.pkl",best_model) # saved only trainded model,  it does not contain preprocessing, if new data comes, need to preprocess
+         save_object("final_model/model.pkl",best_model) # saved only trainded model,  it does not contain preprocessing, if new data comes, need to preprocess, preprcoessing saved hua hai from tranformation
 
 
         ## Model Trainer Artifact
