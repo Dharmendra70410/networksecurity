@@ -26,8 +26,8 @@ import mlflow
 
 
 
-import dagshub
-dagshub.init(repo_owner='Dharmendra70410', repo_name='networksecurity', mlflow=True)
+# import dagshub
+# dagshub.init(repo_owner='Dharmendra70410', repo_name='networksecurity', mlflow=True)
 
 
 from urllib.parse import urlparse
